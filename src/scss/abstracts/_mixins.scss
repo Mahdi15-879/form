@@ -1,0 +1,49 @@
+@mixin FlexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin FlexRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin GridCenter {
+  display: grid;
+  place-items: center;
+}
+
+@mixin Respond($breakpoint) {
+  @if $breakpoint == XS-Mobile {
+    @media only screen and (min-width: 375px) and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == S-Tablet {
+    @media only screen and (min-width: 576px) and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == M-Tablet {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == L-Desktop {
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == XL-Desktop {
+    @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == XXL-Desktop {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./App.css";
+import "./styles/styles.js";
 
 function App() {
   return <div className="App"></div>;
