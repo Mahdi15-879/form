@@ -1,21 +1,15 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React from "react";
+
+import Form from "./Components/Form.js";
 
 import "./styles/styles.js";
 
 function App() {
-  const [currentLocation, setCurrentLocation] = useState({});
-
-  useEffect(() => {
-    getLocation();
-  }, []);
-
-  const getLocation = async () => {
-    const location = await axios.get("https://ipapi.co/json");
-    setCurrentLocation(location.data);
-  };
-
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Form />
+    </div>
+  );
 }
 
 export default App;

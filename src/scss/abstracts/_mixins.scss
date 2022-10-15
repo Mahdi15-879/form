@@ -15,6 +15,13 @@
   place-items: center;
 }
 
+@mixin SVG-Fixer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
 @mixin Respond($breakpoint) {
   @if $breakpoint == XS-Mobile {
     @media only screen and (min-width: 375px) and (max-width: 576px) {

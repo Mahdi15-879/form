@@ -1,0 +1,80 @@
+.Form {
+  background-color: #cddfef;
+  padding: 2.5rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+
+  .image-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    figure,
+    label figure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    figure {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: contain;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    label {
+      cursor: pointer;
+      margin: 0;
+
+      h3 {
+        background-color: #1b7fd6;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        border-radius: 5px;
+        color: white;
+      }
+    }
+
+    #fileInput {
+      display: none;
+    }
+  }
+
+  .fullName,
+  .city {
+    input {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .countries {
+    select {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
